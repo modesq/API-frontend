@@ -29,7 +29,7 @@ class Main extends React.Component {
         event.preventDefault();
         const reqCityName = event.target.city.value;
         //send request to the locationiq.com
-        const URL = `http://localhost:3001/data?cityName=${encodeURIComponent(reqCityName)}`
+        const URL = `https://backend-for-explore-api.herokuapp.com/data?cityName=${encodeURIComponent(reqCityName)}`
         try {
             let resResult = await axios.get(URL);
             console.log(resResult);
